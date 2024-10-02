@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol con D3.js</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        /* Estilos básicos */
+        svg {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            margin: 20px;
+        }
+        .node circle {
+            fill: steelblue;
+        }
+        .node text {
+            font: 12px sans-serif;
+        }
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visualización de Árbol con D3.js</h1>
+    <div id="miVisualizacion"></div>
+
+    <script>
+        // Definición del árbol en formato JSON
+        const datosArbol = {
+            "name": "Raíz",
+            "children": [
+                {
+                    "name": "Hijo 1",
+                    "children": [
+                        { "name": "Nieto 1" },
+                        { "name": "Nieto 2" }
+                    ]
+                },
+                {
+                    "name": "Hijo 2",
+                    "children": [
+                        { "name": "Nieto 3" },
+                        { "name": "Nieto 4" }
+                    ]
+                }
+            ]
+        };
+
+        // Dimensiones del gráfico
+        const width = 600;
+        const height = 400;
+        const margin = {top: 20, right: 90, bottom: 30, left: 90};
+
+        // Crear un lienzo SVG
+        const svg = d3.select("#miVisualizacion").append("svg")
+            .attr("width", width + margin.right + margin.left)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        // Crear un layout de árbol
+        const treeLayout = d3.tree().size([height, width]);
+
+        // Convertir los datos a una estructura jerárquica
+        const root = d3.hierarchy(datosArbol);
+
+        // Crear el layout de árbol
+        treeLayout(root);
+
+        // Crear enlaces entre los nodos
+        svg.selectAll(".link")
+            .data(root.links())
+            .enter()
+            .append("path")
+            .attr("class", "link")
+            .attr("d", d3.linkHorizontal()
+                .x(d => d.y)
+                .y(d => d.x));
+
+        // Crear nodos
+        const node = svg.selectAll(".node")
+            .data(root.descendants())
+            .enter()
+            .append("g")
+            .attr("class", "node")
+            .attr("transform", d => "translate(" + d.y + "," + d.x + ")");
+
+        // Agregar un círculo a cada nodo
+        node.append("circle")
+            .attr("r", 10);
+
+        // Agregar texto a cada nodo
+        node.append("text")
+            .attr("dy", ".35em")
+            .attr("x", d => d.children ? -13 : 13)
+            .style("text-anchor", d => d.children ? "end" : "start")
+            .text(d => d.data.name);
+    </script>
+</body>
+</html>

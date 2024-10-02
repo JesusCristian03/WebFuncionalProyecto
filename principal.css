@@ -1,0 +1,354 @@
+* {
+
+    border: 1px solid black;
+    background-color: #7C6DFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+
+}
+
+.titulo {
+    margin: 0px 10px;
+    padding: 20px;
+    text-align: center;
+
+    /* Mínimo de 16px, máximo de 24px, adaptado a la pantalla */
+    color: #FFFFFF;
+    background-color: #5CA9FF;
+
+    display: grid;
+    /* Activa Grid */
+    grid-template-columns: auto 1fr;
+    /* La primera columna se adapta al tamaño del logo, la segunda ocupa el espacio restante */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    padding: 10px;
+    gap: 15px;
+
+    /* Espacio entre logo y título */
+    h1 {
+        font-size: 3rem;
+        margin: 0;
+        transition: font-size 0.3s ease;
+        color: #FFFFFF;
+        background-color: #5CA9FF;
+
+    }
+
+    img {
+        max-width: 150px;
+        height: auto;
+        transition: max-width 0.3s ease;
+        border-radius: 50%;
+    }
+
+
+}
+
+.barranavegacion {
+    background-color: #152157;
+    margin: 10px;
+    border-radius: 30px;
+
+    ul {
+
+        padding: 0px;
+        background-color: #107acc;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0px 0px;
+        justify-content: space-evenly;
+
+        li {
+            flex: 1;
+
+            /*  Permite que cada elemento use el espacio disponible */
+            border: 1px solid black;
+            padding: 40px;
+            background-color: #FDDF65;
+            color: black;
+            font-size: 30px;
+            display: flex;
+            /* Activa flexbox en el elemento <li> */
+            justify-content: center;
+            /* Centra horizontalmente */
+            align-items: center;
+            /* Centra verticalmente */
+            height: 60px;
+            text-align: center;
+
+        }
+
+        li:hover {
+            background-color: #FDFF91;
+            /* Cambia el color de fondo al poner el mouse encima */
+        }
+    }
+
+}
+
+.introduccion {
+    margin: 10px;
+    padding: 0px;
+    background-color: #152157;
+
+    h2 {
+        margin: 0px;
+        color: black;
+        font-size: 3rem;
+        text-align: center;
+        background-color: #ffff81;
+    }
+
+    /*PArte de la imagen e introduccion de la programacion funcional*/
+    .introimagen {
+
+        display: grid;
+        /* Activa Grid */
+        grid-template-columns: auto 1fr;
+        /* La primera columna se adapta al tamaño del logo, la segunda ocupa el espacio restante */
+        align-items: center;
+        /* Centra verticalmente los elementos */
+        padding: 20px;
+
+        gap: 5px;
+        /* Espacio entre logo y título */
+        background-color: #ffff81;
+
+        img {
+            margin: 0px;
+            max-width: 400px;
+            height: auto;
+            border-radius: 100%;
+        }
+
+        p {
+            margin: 0px;
+            color: black;
+            font-size: 2rem;
+            text-align: justify;
+            background-color: #ffff81;
+        }
+    }
+
+    /*ANIMACION*/
+    .terminologia {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        gap: 20px;
+
+        .card {
+
+            background-color: #4CAF50;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            /*Controla qué ocurre cuando el contenido de un elemento se desborda fuera del área asignada.*/
+
+            display: flex;
+            justify-content: center;
+            /*Alinea los elementos hijos a lo largo del eje principal (horizontal)*/
+            align-items: center;
+            /*Alinea los elementos hijos a lo largo del eje transversal(vertical)*/
+            font-size: 24px;
+            text-align: center;
+            /* Controla la alineación horizontal del texto dentro de un elemento.*/
+            cursor: pointer;
+            /*Cambia la apariencia del cursor cuando pasa sobre un elemento.*/
+        }
+
+    }
+
+    .card .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card .term {
+
+        background-color: black;
+    }
+
+    .card .description {
+        padding: 15px;
+        background-color: #FF5722;
+        transform: translateX(100%);
+        text-align: justify;
+    }
+
+    /*FIN DE LA ANIMACION*/
+
+
+}
+
+/*INICIO DEL DISEÑO DE ARBOLES*/
+.arbol {
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffff81;
+
+    * {
+        background-color: #ffff81;
+    }
+
+    h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    nav {
+
+        padding: 10px;
+
+        p {
+            font-size: 2rem;
+            text-align: justify;
+        }
+
+        ul {
+            font-size: 2rem;
+        }
+    }
+
+    .imagenes {
+        padding: 0px;
+        display: flex;
+        max-width: 100%;
+        height: 350px;
+        overflow: auto;
+
+    }
+
+
+    table {
+
+        width: 100%;
+        /* La tabla usa el 100% del ancho del contenedor */
+        table-layout: fixed;
+        /* Fuerza que las celdas se ajusten dentro de la tabla */
+        border-collapse: collapse;
+        /* Evita el espacio entre bordes */
+        margin: 0 auto;
+        border: 2px solid #333;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        font-size: 2rem;
+
+        .elemento {
+            font-weight: bold;
+        }
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+    }
+
+    td {
+        background-color: #f9f9f9;
+        padding: 10px;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: white;
+    }
+
+    th,
+    td {
+        border: 1px solid #999;
+        text-align: justify;
+        word-wrap: break-word;
+        /* Permite que el texto se ajuste dentro de las celdas */
+    }
+
+    .niveles {
+
+        .nivelesparte1 {
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            /* Permite que los elementos se reorganicen si es necesario */
+        }
+
+        img {
+            max-height: 100%;
+            /* Limita el alto de la imagen para que no sea más grande que el texto */
+            height: auto;
+            /* Mantiene la proporción de la imagen */
+            max-width: 100%;
+            /* Asegura que la imagen nunca exceda el ancho del contenedor */
+            margin: 0 auto;
+        }
+    }
+
+    .recorrido {
+
+        /* Contenedor de las tarjetas */
+        .tarjetas {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 100%;
+            padding: 20px;
+        }
+
+        /* Estilos generales de la tarjeta */
+        .tarjeta {
+            background-color:#ED6D7F;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 30%;
+            /* Cada tarjeta ocupa el 30% del contenedor */
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tarjeta:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Ocultar las imágenes por defecto */
+        .imagen-recorrido {
+            max-width: 100%;
+            height: auto;
+            display: none;
+            /* Las imágenes están ocultas al inicio */
+        }
+
+        /* Estilo del término y significado */
+        .termino {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .significado {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .termino,
+        .significado, .contenido {
+            background-color:#F4F1C1;
+        }
+    }
+
+
+}
