@@ -1,6 +1,4 @@
 * {
-
-
     border: 1px solid black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
@@ -156,7 +154,7 @@
         color: #34C3EE;
         font-size: 3rem;
         text-align: center;
-       background-color: white;
+        background-color: white;
     }
 
     /*PArte de la imagen e introduccion de la programacion funcional*/
