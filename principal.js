@@ -63,6 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
 function cambiarContenido(id) {
     const tarjeta = document.getElementById(id);
     const termino = tarjeta.querySelector(".termino");

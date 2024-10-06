@@ -28,6 +28,7 @@
 
 .barra-navegacion img {
     max-width: 100%;
+    border-radius: 100%;
 }
 
 .barra-navegacion ul {
@@ -40,6 +41,7 @@
     flex-wrap: wrap;
     gap: 0px 0px;
     justify-content: space-evenly;
+    
 }
 
 .barra-navegacion li {
@@ -47,7 +49,7 @@
 
     /*  Permite que cada elemento use el espacio disponible */
     border: 1px solid black;
-    padding: 40px;
+    padding: 10px;
 
     color: black;
     font-size: 30px;
@@ -57,8 +59,8 @@
     /* Centra horizontalmente */
     align-items: center;
     /* Centra verticalmente */
-    height: 60px;
     text-align: center;
+    height: auto;
 }
 
 .iniciosesion {
@@ -71,8 +73,8 @@
     text-decoration: none;
     color: white;
     /* Color del texto */
-    font-size: 1.2rem;
-    padding: 10px 20px;
+    font-size: 2rem;
+
     background: transparent;
     /* Elimina cualquier color de fondo */
 }
@@ -95,11 +97,11 @@
         h2{
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             text-align: center;
-            font-size: 4vw;
+            font-size: 3.5vw;
         }
         p{
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 2vw;
+            font-size: 1.5vw;
         }
 
       
@@ -130,7 +132,7 @@
         border: 2px solid #333;
         border-radius: 8px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        font-size: 2rem;
+        font-size: 1.5rem;
 
         .elemento {
             font-weight: bold;
@@ -163,6 +165,22 @@
         word-wrap: break-word;
         /* Permite que el texto se ajuste dentro de las celdas */
     }
+    .niveles{
+        ul{
+            
+            li{
+                font-size: 1.5vw;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        }
+        img{
+
+            width: 100%;
+            height: auto;
+        }
+
+
+    }
 
 }
 footer {
@@ -180,20 +198,22 @@ footer {
     justify-content: space-between;
     align-items: stretch;
     gap: 20px;
-    max-width: 1500px;
+    max-width: 100%;
     margin: 0 auto 20px;
     padding: 20px;
   }
 
   /* Estilos para las tarjetas */
   .tarjeta1 {
-   
     color: white;
     width: 23%; /* Cada tarjeta ocupa el 23% del ancho del contenedor */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    p,h3{
+        font-size: 1rem;
+    }
   }
 
   /* Tarjeta grande para los colaboradores */
@@ -205,6 +225,9 @@ footer {
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    p{
+        font-size: 1rem;
+    }
   }
 
   /* Estilo para la sección de colaboradores */
@@ -213,6 +236,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     margin-top: 20px;
+  
   }
 
   .colaborador1 {
@@ -235,3 +259,58 @@ footer {
     border-radius: 5px;
     cursor: pointer;
   }
+  .recorrido {
+
+    /* Contenedor de las tarjetas */
+    .tarjetas {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    /* Estilos generales de la tarjeta */
+    .tarjeta {
+        background-image: url(imagenes/reflejo1.jpg);
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        width: 30%;
+        /* Cada tarjeta ocupa el 30% del contenedor */
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .tarjeta:hover {
+        background-color: #e0e0e0;
+    }
+
+    /* Ocultar las imágenes por defecto */
+    .imagen-recorrido {
+        max-width: 100%;
+        height: auto;
+        display: none;
+        /* Las imágenes están ocultas al inicio */
+    }
+
+    /* Estilo del término y significado */
+    .termino {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .significado {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .termino,
+    .significado,
+    .contenido {
+        background-color: #F4F1C1;
+    }
+}

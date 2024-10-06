@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Haskell Coloreado</title>
+    <style>
+        body {
+            background-color: #282c34;
+            color: #ffffff;
+            font-family: "Courier New", monospace;
+            padding: 20px;
+        }
+
+        .keyword {
+            color: #c678dd; /* Palabras clave */
+        }
+
+        .function {
+            color: #61dafb; /* Funciones */
+        }
+
+        .string {
+            color: #98c379; /* Cadenas */
+        }
+
+        .number {
+            color: #d19a66; /* Números */
+        }
+
+        .comment {
+            color: #5c6370; /* Comentarios */
+        }
+
+        .operator {
+            color: #e06c75; /* Operadores */
+        }
+
+        pre {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<pre>
+<span class="comment">-- Función para sumar los números pares de una lista</span>
+<span class="keyword">sumarPares</span> :: [<span class="keyword">Int</span>] -> <span class="keyword">Int</span>
+<span class="keyword">sumarPares</span> <span class="operator">=</span> <span class="keyword">foldr</span> (<span class="operator">+</span>) <span class="number">0</span> . <span class="keyword">filter</span> (<span class="keyword">even</span>)
+
+<span class="comment">-- Uso de la función sumarPares</span>
+<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> (<span class="keyword">sumarPares</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])
+
+<span class="comment">-- Función para mapear una función sobre una lista</span>
+<span class="keyword">aplicarFuncion</span> :: (<span class="keyword">a</span> -> <span class="keyword">b</span>) -> [<span class="keyword">a</span>] -> [<span class="keyword">b</span>]
+<span class="keyword">aplicarFuncion</span> f <span class="operator">=</span> <span class="keyword">map</span> f
+
+<span class="comment">-- Uso de la función aplicarFuncion con una función anónima</span>
+<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> (<span class="keyword">aplicarFuncion</span> (<span class="keyword">\\</span>x <span class="operator">-></span> x <span class="operator">*</span> x) [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])
+
+<span class="comment">-- Función para calcular el factorial de un número</span>
+<span class="keyword">factorial</span> :: <span class="keyword">Int</span> -> <span class="keyword">Int</span>
+<span class="keyword">factorial</span> <span class="number">0</span> <span class="operator">=</span> <span class="number">1</span>
+<span class="keyword">factorial</span> n <span class="operator">=</span> n <span class="operator">*</span> <span class="keyword">factorial</span> (n <span class="operator">-</span> <span class="number">1</span>)
+
+<span class="comment">-- Uso de la función factorial</span>
+<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> (<span class="keyword">factorial</span> <span class="number">5</span>)
+</pre>
+
+</body>
+</html>

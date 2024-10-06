@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARADIGMA DE PROGRAMACION FUNCIONAL</title>
+    <link rel="icon" href="imagenes/Cubo.png" type="image/png">
+    <link rel="stylesheet" href="paradigma.css">
+</head>
+
+<body>
+    <header>
+
+        <nav class="barra-navegacion">
+            <ul>
+                <li><img src="/imagenes/F.jpg" alt=""></li>
+                <li><a href="">INICIO</a></li>
+                <li><a href="">ÁRBOLES</a></li>
+                <li><a href="">PARADIGMA FUNCIONAL</a></li>
+                <li><a href="">CONCEPTOS CLAVE</a></li>
+                <li><a href="">EJERCICIO</a></li>
+                <li><a href="">VIDEOS</a></li>
+                <li href="" class="iniciosesion"><a href="">INICIAR SESION</a></li>
+            </ul>
+        </nav>
+
+
+
+    </header>
+    <main>
+        <article class="paradigma">
+            <nav class="texto">
+                <h2>PARADIGMA DE PROGRAMACIÓN FUNCIONAL</h2>
+                <p>El paradigma de la programación funcional es un enfoque de desarrollo de software que se basa en la
+                    aplicación de funciones matemáticas y el uso de principios como la inmutabilidad, las funciones
+                    puras y la ausencia de efectos secundarios</p>
+                <img src="imagenes/paradigma.png" alt="">
+                <p>Este paradigma enfatiza "qué hacer" en lugar de "cómo hacerlo", en contraste con otros paradigmas
+                    como el imperativo, que se enfoca en instrucciones detalladas paso a paso.</p>
+            </nav>
+
+            <nav class="introduccion">
+                <nav>
+                    <h2>TÉRMINOS</h2>
+                </nav>
+                <nav class="terminologia">
+                    <div class="card" data-term="FUNCIÓN"
+                        data-description="Es una construcción que generará una salida cuando se proporcione una entrada.">
+                    </div>
+                    <div class="card" data-term="EXPRESIÓN"
+                        data-description="Se trata de una construcción en el código que genera un valor."></div>
+                    <div class="card" data-term="PUREZA"
+                        data-description="Es una propiedad de una función cuyo valor devuelto siempre es el mismo para los mismos argumentos.">
+                    </div>
+                    <div class="card" data-term="TRANSPARENCIA REFERENCIAL"
+                        data-description="Se trata de una propiedad de expresiones que se pueden reemplazar por su salida sin que ello afecte al comportamiento de un programa">
+                    </div>
+                    <div class="card" data-term="INMUTABILIDAD"
+                        data-description="Significa que un valor no se puede cambiar en contexto."></div>
+                    <div class="card" data-term="COMPOSICION DE FUNCIONES"
+                        data-description="Combinar funciones simples para crear funciones complejas."></div>
+                </nav>
+            </nav>
+            <nav class="code">
+                <h2>EJERCICIO EN HASKELL</h2>
+                <p>Descripción:</p>
+                <ul>
+                    <li>Filtrar los números pares.</li>
+                    <li>Multiplicar cada número par por 2.</li>
+                    <li>Sumar todos los números resultantes.</li>
+                </ul>
+
+
+                <pre>
+<span class="comment">-- Función para sumar los números pares de una lista</span>
+<span class="keyword">sumarPares</span> :: [<span class="keyword">Int</span>] -> <span class="keyword">Int</span>
+<span class="keyword">sumarPares</span> <span class="operator">=</span> <span class="keyword">foldr</span> (<span class="operator">+</span>) <span class="number">0</span> . <span class="keyword">filter</span> (<span class="keyword">even</span>)
+                    
+<span class="comment">-- Uso de la función sumarPares</span>
+<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> (<span class="keyword">sumarPares</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])
+                    
+<span class="comment">-- Función para mapear una función sobre una lista</span>
+<span class="keyword">aplicarFuncion</span> :: (<span class="keyword">a</span> -> <span class="keyword">b</span>) -> [<span class="keyword">a</span>] -> [<span class="keyword">b</span>]
+<span class="keyword">aplicarFuncion</span> f <span class="operator">=</span> <span class="keyword">map</span> f
+                    
+<span class="comment">-- Uso de la función aplicarFuncion con una función anónima</span>
+<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> (<span class="keyword">aplicarFuncion</span> (<span class="keyword">\\</span>x <span class="operator">-></span> x <span class="operator">*</span> x) [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])
+                    
+<span class="comment">-- Función para calcular el factorial de un número</span>
+<span class="keyword">factorial</span> :: <span class="keyword">Int</span> -> <span class="keyword">Int</span>
+<span class="keyword">factorial</span> <span class="number">0</span> <span class="operator">=</span> <span class="number">1</span>
+<span class="keyword">factorial</span> n <span class="operator">=</span> n <span class="operator">*</span> <span class="keyword">factorial</span> (n <span class="operator">-</span> <span class="number">1</span>)
+                    
+<span class="comment">-- Uso de la función factorial</span>
+<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> (<span class="keyword">factorial</span> <span class="number">5</span>)
+                    </pre>
+
+            </nav>
+
+
+        </article>
+
+
+    </main>
+    <footer>
+        <!-- Contenedor de las 4 tarjetas pequeñas -->
+        <div class="contenedor-tarjetas1">
+            <!-- Primera tarjeta -->
+            <div class="tarjeta1">
+                <h3>Información de Contacto</h3>
+                <p>Correo electrónico, teléfono y dirección.</p>
+                <button>Más información</button>
+            </div>
+
+            <!-- Segunda tarjeta -->
+            <div class="tarjeta1">
+                <h3>Redes Sociales</h3>
+                <p>Íconos y enlaces a Facebook, Twitter, LinkedIn y GitHub.</p>
+                <button>Visítanos</button>
+            </div>
+
+            <!-- Tercera tarjeta -->
+            <div class="tarjeta1">
+                <h3>Términos y Condiciones</h3>
+                <p>Información sobre los términos y condiciones del sitio.</p>
+                <button>Leer más</button>
+            </div>
+
+            <!-- Cuarta tarjeta -->
+            <div class="tarjeta1">
+                <h3>Información Legal</h3>
+                <p>Políticas de privacidad y derechos de autor.</p>
+                <button>Ver detalles</button>
+            </div>
+        </div>
+
+        <!-- Tarjeta grande para los colaboradores -->
+        <div class="tarjeta-grande1">
+            <h2>COLABORADORES</h2>
+            <div class="colaboradores1">
+                <!-- Primer colaborador -->
+                <div class="colaborador1">
+                    <img src="imagenes/cristian.png" alt="Colaborador 1">
+                    <p>Jesus Cristian Campos Romero</p>
+                </div>
+
+                <!-- Segundo colaborador -->
+                <div class="colaborador1">
+                    <img src="imagenes/valeria.png" alt="Colaborador 2">
+                    <p>Valeria Ramirez Calleja</p>
+                </div>
+
+                <!-- Tercer colaborador -->
+                <div class="colaborador1">
+                    <img src="imagenes/chino.png" alt="Colaborador 3">
+                    <p>Irving Eduardo Galindo Barrera</p>
+                </div>
+
+                <!-- Cuarto colaborador -->
+                <div class="colaborador1">
+                    <img src="imagenes/diego.png" alt="Colaborador 4">
+                    <p>Diego</p>
+                </div>
+                <div class="colaborador1">
+                    <img src="imagenes/abigail.png" alt="Colaborador 4">
+                    <p>Mayra Abigail Horcasitas</p>
+                </div>
+                <div class="colaborador1">
+                    <img src="colaborador4.png" alt="Colaborador 4">
+                    <p>Yahmir</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="principal.js"></script>
+</body>
+
+</html>

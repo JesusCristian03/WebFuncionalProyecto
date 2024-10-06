@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProgramacionWebPerezosa</title>
+    <title>ÁRBOLES</title>
     <link rel="icon" href="imagenes/Cubo.png" type="image/png">
     <link rel="stylesheet" href="arboles.css">
 </head>
@@ -27,11 +27,13 @@
 
         <main>
             <article class="arbol">
-                <nav class="texto">   
-                    <h2>ARBOLES</h2>
+                <nav class="texto">
+                    <h2>ÁRBOLES</h2>
                     <nav>
-                        <p>Los Árboles son las estructuras de datos mas utilizadas, pero también una de las mas complejas, Los
-                            Árboles se caracterizan por almacenar sus nodos en forma jerárquica y no en forma lineal como las
+                        <p>Los Árboles son las estructuras de datos mas utilizadas, pero también una de las mas
+                            complejas, Los
+                            Árboles se caracterizan por almacenar sus nodos en forma jerárquica y no en forma lineal
+                            como las
                             Listas Ligadas, Colas,Pilas,etc., de las cuales ya hemos hablado en días pasados.</p>
                         <nav class="imagenes">
                             <img src="imagenes/partesarbol.png" alt="">
@@ -43,14 +45,14 @@
                             <tr>
                                 <th>ELEMENTO</th>
                                 <th>DESCRIPCIÓN</th>
-                  
+
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td class="elemento">Nodos</td>
                                 <td>Se le llama Nodo a cada elemento que contiene un Árbol.</td>
-        
+
                             </tr>
                             <tr>
                                 <td class="elemento">Nodos raiz</td>
@@ -67,23 +69,87 @@
                             <tr>
                                 <td class="elemento">Nodo Hermano</td>
                                 <td>Los nodos hermanos son aquellos nodos que comparte a un mismo padre en común </td>
-        
+
                             </tr>
                             <tr>
                                 <td class="elemento">Nodo Hoja</td>
-                                <td>Son todos aquellos nodos que no tienen hijos, los cuales siempre se encuentran en los extremos de la estructura.</td>
+                                <td>Son todos aquellos nodos que no tienen hijos, los cuales siempre se encuentran en
+                                    los extremos de la estructura.</td>
                             </tr>
                             <tr>
                                 <td class="elemento ">Nodo Rama</td>
-                                <td>Estos son todos aquellos nodos que no son la raíz y que además tiene al menos un hijo.</td>
+                                <td>Estos son todos aquellos nodos que no son la raíz y que además tiene al menos un
+                                    hijo.</td>
                             </tr>
                         </tbody>
                     </table>
-    
+                    <nav class="niveles">
+                        <h2>Nivel</h2>
+
+                        <nav class="nivelesparte1">
+                            <nav class="texto1">
+                                <p>Nos referimos como nivel a cada generación dentro del árbol. Por ejemplo, cuando a un
+                                    nodo hoja le agregamos un hijo, el nodo hoja pasa a ser un nodo rama pero además el
+                                    árbol crece una generación por lo que el Árbol tiene un nivel más. Cada generación
+                                    tiene un número de Nivel distinto que las demás generaciones.</p>
+                                <ul>
+                                    <li>Un árbol vacío tiene 0 niveles</li>
+                                    <li>El nivel de la Raíz es 1</li>
+                                    <li>El nivel de cada nodo se calculado contando cuantos nodos existen sobre el,
+                                        hasta llegar a la raíz + 1</li>
+                                </ul>
+                            </nav>
+                            <img src="imagenes/niveles.png" alt="">
+                        </nav>
+
+
+
+
+                    </nav>
+                    <nav class="recorrido">
+                        <h2>Recorrido de arbol</h2>
+                        <p>Los recorridos son algoritmos que nos permiten recorrer un árbol en un orden especifico, los
+                            recorridos nos pueden ayudar encontrar un nodo en el árbol, o buscar una posición
+                            determinada para insertar o eliminar un nodo.</p>
+                        <div class="tarjetas">
+                            <div class="tarjeta" id="inorden" onclick="cambiarContenido('inorden')">
+                                <div class="contenido">
+                                    <p class="termino">Inorden</p>
+                                    <p class="significado">Recorre el subárbol izquierdo, luego la raíz y luego el
+                                        subárbol derecho.</p>
+                                    <img src="imagenes/inorden.jpg" alt="Inorden Recorrido" class="imagen-recorrido"
+                                        style="display: none;">
+                                </div>
+                            </div>
+
+                            <div class="tarjeta" id="preorden" onclick="cambiarContenido('preorden')">
+                                <div class="contenido">
+                                    <p class="termino">Preorden</p>
+                                    <p class="significado">Primero visita la raíz, luego el subárbol izquierdo y después
+                                        el subárbol derecho.</p>
+                                    <img src="imagenes/preorden.jpg" alt="Preorden Recorrido" class="imagen-recorrido"
+                                        style="display: none;">
+                                </div>
+                            </div>
+
+                            <div class="tarjeta" id="postorden" onclick="cambiarContenido('postorden')">
+                                <div class="contenido">
+                                    <p class="termino">Postorden</p>
+                                    <p class="significado">Se recorre el pos-orden cada uno de los sub-árboles y al
+                                        final se recorre la raíz.</p>
+                                    <img src="imagenes/postorden.jpg" alt="Postorden Recorrido" class="imagen-recorrido"
+                                        style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+
+                    </nav>
+
+
                 </nav>
-                               
+
             </article>
-            
+
 
         </main>
 
@@ -121,30 +187,38 @@
 
             <!-- Tarjeta grande para los colaboradores -->
             <div class="tarjeta-grande1">
-                <h2>Colaboradores</h2>
+                <h2>COLABORADORES</h2>
                 <div class="colaboradores1">
                     <!-- Primer colaborador -->
                     <div class="colaborador1">
-                        <img src="colaborador1.png" alt="Colaborador 1">
-                        <p>Nombre Colaborador 1</p>
+                        <img src="imagenes/cristian.png" alt="Colaborador 1">
+                        <p>Jesus Cristian Campos Romero</p>
                     </div>
 
                     <!-- Segundo colaborador -->
                     <div class="colaborador1">
-                        <img src="colaborador2.png" alt="Colaborador 2">
-                        <p>Nombre Colaborador 2</p>
+                        <img src="imagenes/valeria.png" alt="Colaborador 2">
+                        <p>Valeria Ramirez Calleja</p>
                     </div>
 
                     <!-- Tercer colaborador -->
                     <div class="colaborador1">
-                        <img src="colaborador3.png" alt="Colaborador 3">
-                        <p>Nombre Colaborador 3</p>
+                        <img src="imagenes/chino.png" alt="Colaborador 3">
+                        <p>Irving Eduardo Galindo Barrera</p>
                     </div>
 
                     <!-- Cuarto colaborador -->
                     <div class="colaborador1">
+                        <img src="imagenes/diego.png" alt="Colaborador 4">
+                        <p>Diego</p>
+                    </div>
+                    <div class="colaborador1">
+                        <img src="imagenes/abigail.png" alt="Colaborador 4">
+                        <p>Mayra Abigail Horcasitas</p>
+                    </div>
+                    <div class="colaborador1">
                         <img src="colaborador4.png" alt="Colaborador 4">
-                        <p>Nombre Colaborador 4</p>
+                        <p>Yahmir</p>
                     </div>
                 </div>
             </div>

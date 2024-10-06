@@ -21,17 +21,16 @@
                 <li><a href="">CONCEPTOS CLAVE</a></li>
                 <li><a href="">EJERCICIO</a></li>
                 <li><a href="">VIDEOS</a></li>
-                <li class="iniciosesion"><a href="">INICIAR SESION</a></li>
+                <li  href="" class="iniciosesion" ><a href="">INICIAR SESION</a></li>
             </ul>
         </nav>
 
         <nav class="portada">
             <nav class="portadaparte1">
-                <p class="portadaparte1titulo">PROGRAMACION FUNCIONAL</p>
-                <p class="portadaparte1titulo2">Este paradigma enfatiza  "qué hacer" en lugar de "cómo hacerlo", en contraste con otros
-                    paradigmas como el imperativo, que se enfoca en instrucciones detalladas paso a paso.</p>
-                <p class="portadaparte1titulo3">El paradigma de la programación funcional es un enfoque de desarrollo de software que se basa en la aplicación de funciones matemáticas y el uso de principios como la inmutabilidad, las funciones puras y la ausencia de efectos secundarios.</p>
-                <button>SABER MAS</button>
+                <p class="portadaparte1titulo">PROGRAMACIÓN FUNCIONAL</p>
+                <p class="portadaparte1titulo2">La programación funcional es un estilo de programación que hace hincapié en el uso de funciones y datos inmutables.</p>
+                <p class="portadaparte1titulo3">Corresponde al patrón de programación que se fundamenta en el concepto de enunciar el proceder de un programa como un modelo funcional matemático más que como secuencias explícitas de instrucciones a un procesador, que es el concepto principal en la programación imperativa</p>
+                <button><a href="#subtemas">SABER MAS</a></button>
             </nav>
             <nav class="portadaparte1">
                 <img src="/imagenes/haskell.png" alt="">
@@ -47,26 +46,26 @@
             </nav>
 
             <nav class="terminologia">
-                <div class="card" data-term="FUNCION"
-                    data-description="Es una construcción que generará una salida cuando se proporcione una entrada.">
+                <div class="card" data-term="FUNCIONES PURAS"
+                    data-description="Una función es pura cuando no tiene efectos secundarios observables, como alteración de las variables externas, cambios en el sistema de archivos, etc.">
                 </div>
-                <div class="card" data-term="EXPRESION"
-                    data-description="Se trata de una construcción en el código que genera un valor."></div>
-                <div class="card" data-term="PUREZA"
-                    data-description="Es una propiedad de una función cuyo valor devuelto siempre es el mismo para los mismos argumentos.">
+                <div class="card" data-term="RECURSIVIDAD"
+                    data-description="En la programación funcional no existen los bucles “for” y “while”. En su lugar, para la iteración se depende de la recursividad."></div>
+                <div class="card" data-term="FUNCIONES DE ORDEN SUPERIOR"
+                    data-description="Son funciones que aceptan otras funciones como parámetros o devuelven funciones como resultado.">
                 </div>
-                <div class="card" data-term="TRANSPARENCIA REFERENCIAL"
-                    data-description="Se trata de una propiedad de expresiones que se pueden reemplazar por su salida sin que ello afecte al comportamiento de un programa">
+                <div class="card" data-term="CURRIFICACIÓN"
+                    data-description="Es el proceso de transformar una función que toma múltiples argumentos en una secuencia de funciones que toman un solo argumento cada una.">
                 </div>
-                <div class="card" data-term="INMUTABILIDAD"
-                    data-description="Significa que un valor no se puede cambiar en contexto."></div>
+                <div class="card" data-term="FUNCIONES DE PRIMERA CLASE"
+                    data-description="Las mónadas son un concepto avanzado que permite manejar secuencias de operaciones, especialmente cuando estas operaciones tienen efectos secundarios sin romper la pureza funcionalLas funciones se consideran como valores que se pueden asignar a variables, por lo cual se las puede pasar hacia y retornar desde otras funciones."></div>
                 <div class="card" data-term="COMPOSICION DE FUNCIONES"
                     data-description="Combinar funciones simples para crear funciones complejas."></div>
             </nav>
         </article>
 
         <article>
-            <div class="contenedor-tarjetas">
+            <div id="subtemas"class="contenedor-tarjetas">
                 <!-- Primera tarjeta -->
                 <div class="tarjeta">
                   <img src="/imagenes/arbol.png" alt="Imagen 1">
@@ -137,33 +136,41 @@
     
         <!-- Tarjeta grande para los colaboradores -->
         <div class="tarjeta-grande1">
-          <h2>Colaboradores</h2>
+          <h2>COLABORADORES</h2>
           <div class="colaboradores1">
-            <!-- Primer colaborador -->
-            <div class="colaborador1">
-              <img src="colaborador1.png" alt="Colaborador 1">
-              <p>Nombre Colaborador 1</p>
-            </div>
-    
-            <!-- Segundo colaborador -->
-            <div class="colaborador1">
-              <img src="colaborador2.png" alt="Colaborador 2">
-              <p>Nombre Colaborador 2</p>
-            </div>
-    
-            <!-- Tercer colaborador -->
-            <div class="colaborador1">
-              <img src="colaborador3.png" alt="Colaborador 3">
-              <p>Nombre Colaborador 3</p>
-            </div>
-    
-            <!-- Cuarto colaborador -->
-            <div class="colaborador1">
-              <img src="colaborador4.png" alt="Colaborador 4">
-              <p>Nombre Colaborador 4</p>
-            </div>
+              <!-- Primer colaborador -->
+              <div class="colaborador1">
+                  <img src="imagenes/cristian.png" alt="Colaborador 1">
+                  <p>Jesus Cristian Campos Romero</p>
+              </div>
+
+              <!-- Segundo colaborador -->
+              <div class="colaborador1">
+                  <img src="imagenes/valeria.png" alt="Colaborador 2">
+                  <p>Valeria Ramirez Calleja</p>
+              </div>
+
+              <!-- Tercer colaborador -->
+              <div class="colaborador1">
+                  <img src="imagenes/chino.png" alt="Colaborador 3">
+                  <p>Irving Eduardo Galindo Barrera</p>
+              </div>
+
+              <!-- Cuarto colaborador -->
+              <div class="colaborador1">
+                  <img src="imagenes/diego.png" alt="Colaborador 4">
+                  <p>Diego</p>
+              </div>
+              <div class="colaborador1">
+                  <img src="imagenes/abigail.png" alt="Colaborador 4">
+                  <p>Mayra Abigail Horcasitas</p>
+              </div>
+              <div class="colaborador1">
+                  <img src="colaborador4.png" alt="Colaborador 4">
+                  <p>Yahmir</p>
+              </div>
           </div>
-        </div>
+      </div>
       </footer>
     
     <script src="principal.js"></script>
