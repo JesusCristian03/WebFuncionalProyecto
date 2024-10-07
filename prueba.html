@@ -3,72 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Código Haskell Coloreado</title>
+    <title>Tarjetas con Animación</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            background-color: #282c34;
-            color: #ffffff;
-            font-family: "Courier New", monospace;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 80%;
+            gap: 20px;
+        }
+
+        .card {
+            width: 30%;
+            height: 250px;
+            background-color: #1e90ff;
+            color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .term, .description {
+            position: absolute;
             padding: 20px;
+            text-align: center;
+            transition: opacity 0.5s ease;
         }
 
-        .keyword {
-            color: #c678dd; /* Palabras clave */
+        .term {
+            font-size: 24px;
+            font-weight: bold;
         }
 
-        .function {
-            color: #61dafb; /* Funciones */
+        .description {
+            font-size: 16px;
+            opacity: 0;
         }
 
-        .string {
-            color: #98c379; /* Cadenas */
+        .card:hover .term {
+            opacity: 0;
         }
 
-        .number {
-            color: #d19a66; /* Números */
-        }
-
-        .comment {
-            color: #5c6370; /* Comentarios */
-        }
-
-        .operator {
-            color: #e06c75; /* Operadores */
-        }
-
-        pre {
-            background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
-            overflow-x: auto;
+        .card:hover .description {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
 
-<pre>
-<span class="comment">-- Función para sumar los números pares de una lista</span>
-<span class="keyword">sumarPares</span> :: [<span class="keyword">Int</span>] -> <span class="keyword">Int</span>
-<span class="keyword">sumarPares</span> <span class="operator">=</span> <span class="keyword">foldr</span> (<span class="operator">+</span>) <span class="number">0</span> . <span class="keyword">filter</span> (<span class="keyword">even</span>)
+<div class="container">
+    <div class="card">
+        <div class="term">D</div>
+        <div class="description">Fue diseñado después de C++, obteniendo todos sus beneficios a la vez que elimina sus debilidades observadas por tener que ser compatible con C.</div>
+    </div>
 
-<span class="comment">-- Uso de la función sumarPares</span>
-<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> (<span class="keyword">sumarPares</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])
+    <div class="card">
+        <div class="term">Erlang</div>
+        <div class="description">Es altamente escalable y concurrente, haciéndolo ideal para las telecomunicaciones y otras aplicaciones que reciben cantidades masivas de datos en un orden impredecible.</div>
+    </div>
 
-<span class="comment">-- Función para mapear una función sobre una lista</span>
-<span class="keyword">aplicarFuncion</span> :: (<span class="keyword">a</span> -> <span class="keyword">b</span>) -> [<span class="keyword">a</span>] -> [<span class="keyword">b</span>]
-<span class="keyword">aplicarFuncion</span> f <span class="operator">=</span> <span class="keyword">map</span> f
+    <div class="card">
+        <div class="term">Haskell</div>
+        <div class="description">Este es un lenguaje puro de programación funcional, que utiliza para ello el cálculo Lambda.</div>
+    </div>
 
-<span class="comment">-- Uso de la función aplicarFuncion con una función anónima</span>
-<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> (<span class="keyword">aplicarFuncion</span> (<span class="keyword">\\</span>x <span class="operator">-></span> x <span class="operator">*</span> x) [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])
+    <div class="card">
+        <div class="term">ML</div>
+        <div class="description">Se utiliza en aplicaciones matemáticas, científicas, financieras, analíticas y de otros tipos. Una de sus fortalezas es hacer software para manejar otros programas.</div>
+    </div>
 
-<span class="comment">-- Función para calcular el factorial de un número</span>
-<span class="keyword">factorial</span> :: <span class="keyword">Int</span> -> <span class="keyword">Int</span>
-<span class="keyword">factorial</span> <span class="number">0</span> <span class="operator">=</span> <span class="number">1</span>
-<span class="keyword">factorial</span> n <span class="operator">=</span> n <span class="operator">*</span> <span class="keyword">factorial</span> (n <span class="operator">-</span> <span class="number">1</span>)
+    <div class="card">
+        <div class="term">Objective Caml</div>
+        <div class="description">Es un lenguaje de código abierto que se basa en Caml. Tiende a crear programas muy livianos, ayudando a que estos se puedan cargar y ejecutar más rápidamente que los creados por otros lenguajes.</div>
+    </div>
 
-<span class="comment">-- Uso de la función factorial</span>
-<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> (<span class="keyword">factorial</span> <span class="number">5</span>)
-</pre>
+    <div class="card">
+        <div class="term">Scheme</div>
+        <div class="description">Está basado en la sintaxis de LISP y la estructura de ALGOL. Gracias a su simplicidad, se utiliza en muchos cursos de informática como introducción al diseño de programas para mostrar algunos de los fundamentos de la programación informática.</div>
+    </div>
+</div>
 
 </body>
 </html>
