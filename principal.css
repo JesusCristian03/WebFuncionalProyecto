@@ -1,5 +1,5 @@
 * {
-    border: 1px solid black;
+   
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 
@@ -314,7 +314,6 @@ footer {
 
   /* Estilos para las tarjetas */
   .tarjeta1 {
-   
     color: white;
     width: 23%; /* Cada tarjeta ocupa el 23% del ancho del contenedor */
     border-radius: 10px;
