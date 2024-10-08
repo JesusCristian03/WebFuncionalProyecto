@@ -1,5 +1,5 @@
 * {
-    
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 
@@ -270,7 +270,7 @@
 
     pre {
         background-color: #060621;
-        padding: 20px;
+        padding: 0px;
         border-radius: 10px;
         overflow-x: auto;
         

@@ -15,12 +15,12 @@
         <nav class="barra-navegacion">
             <ul>
                 <li><img src="/imagenes/F.jpg" alt=""></li>
-                <li><a href="">INICIO</a></li>
-                <li><a href="">ÁRBOLES</a></li>
-                <li><a href="">PARADIGMA FUNCIONAL</a></li>
-                <li><a href="">CONCEPTOS CLAVE</a></li>
-                <li><a href="">EVALUACIÓN PEREZOSA</a></li>
-                <li><a href="">EJERCICIO</a></li>
+                <li><a href="principal.html">INICIO</a></li>
+                <li><a href="arboles.html">ÁRBOLES</a></li>
+                <li><a href="paradigma.html">PARADIGMA FUNCIONAL</a></li>
+                <li><a href="ConceptosClaves.html">CONCEPTOS CLAVE</a></li>
+                <li><a href="EvaluacionPerezosa.html">EVALUACIÓN PEREZOSA</a></li>
+                <li><a href="paradigma.html#ejercicio1">EJERCICIO</a></li>
                 <li href="" class="iniciosesion"><a href="">INICIAR SESION</a></li>
             </ul>
         </nav>
@@ -95,29 +95,9 @@
                     <li>Multiplicar cada número par por 2.</li>
                     <li>Sumar todos los números resultantes.</li>
                 </ul>
-                <pre> 
-<span class="comment">-- Función para sumar los números pares de una lista</span>
-<span class="keyword">sumarPares</span> <span class="keywordwhite">:: [</span><span class="keyword">Int</span><span class="keywordwhite">] -></span> <span class="keyword">Int</span>
-<span class="keyword">sumarPares</span> <span class="operator">=</span> <span class="keyword">foldr</span> <span class="keywordwhite">(</span><span class="operator">+</span><span class="keywordwhite">)</span> <span class="number">0</span> <span class="keywordwhite"> . </span> <span class="keyword">filter</span><span class="keywordwhite">(</span><span class="keyword">even</span><span class="keywordwhite">)</span>
-                    
-<span class="comment">-- Uso de la función sumarPares</span>
-<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> <span class="keywordwhite">(</span><span class="keyword">sumarPares</span> <span class="keywordwhite">[</span><span class="number">1</span><span class="keywordwhite">,</span> <span class="number">2</span><span class="keywordwhite">,</span> <span class="number">3</span><span class="keywordwhite">,</span> <span class="number">4</span><span class="keywordwhite">,</span> <span class="number">5</span><span class="keywordwhite">, </span> <span class="number">6</span><span class="keywordwhite">])</span>
-                    
-<span class="comment">-- Función para mapear una función sobre una lista</span>
-<span class="keyword">aplicarFuncion</span> <span class="keywordwhite">:: (</span><span class="keyword">a</span> <span class="keywordwhite">-></span> <span class="keyword">b</span><span class="keywordwhite">) -> [</span>) <span class="keyword">a</span><span class="keywordwhite">[ -> ]</span><span class="keyword">b</span><span class="keywordwhite">]</span>
-<span class="keyword">aplicarFuncion</span> <span class="keywordwhite">f</span> <span class="operator">=</span> <span class="keyword">map</span> <span class="keywordwhite"> f </span>
-                    
-<span class="comment">-- Uso de la función aplicarFuncion con una función anónima</span>
-<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> <span class="keywordwhite">(</span><span class="keyword">aplicarFuncion</span><span class="keywordwhite">(</span><span class="keyword">\\</span><span class="keywordwhite"> x </span> <span class="operator">-></span> <span class="keywordwhite"> x </span> <span class="operator">*</span> <span class="keywordwhite">x) [</span><span class="number">1</span><span class="keywordwhite">, </span><span class="number">2</span><span class="keywordwhite">, </span><span class="number">3</span><span class="keywordwhite">])</span>
-                    
-<span class="comment">-- Función para calcular el factorial de un número</span>
-<span class="keyword">factorial</span> <span class="keywordwhite"> :: </span> <span class="keyword">Int</span> <span class="keywordwhite"> -> </span> <span class="keyword">Int</span>
-<span class="keyword">factorial</span> <span class="number">0</span> <span class="operator">=</span> <span class="number">1</span>
-<span class="keyword">factorial</span> <span class="keywordwhite"> n </span> <span class="operator">=</span> <span class="keywordwhite"> n </span> <span class="operator">*</span> <span class="keyword">factorial</span> <span class="keywordwhite"> (n </span> <span class="operator">-</span> <span class="number">1</span><span class="keywordwhite">)</span>
-                    
-<span class="comment">-- Uso de la función factorial</span>
-<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> <span class="keywordwhite">( </span><span class="keyword">factorial</span> <span class="number">5</span><span class="keywordwhite">) </span>
-                    </pre>
+                <pre id="ejercicio1">
+<img src="imagenes/codigohaskell.png" alt="">
+                </pre>
             </nav>
         </article>
         
