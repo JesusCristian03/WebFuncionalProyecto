@@ -235,10 +235,20 @@ video {
   width: 600px;
 }
 
-
-
-
-
+.bibliografia{
+   
+  h2{
+      margin: 0px;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+   
+  }
+  p{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1.5vw;
+  }
+}
 
 
 footer {
@@ -304,6 +314,7 @@ footer {
   }
 }
 /* Tarjeta grande para los colaboradores */
+/* Tarjeta grande para los colaboradores */
 .tarjeta-grande1 {
   background-color: #1a1a1a;
   color: white;
@@ -332,6 +343,7 @@ footer {
   height: 100px;
   margin-bottom: 10px;
 }
+
 
 /* Botones dentro de las tarjetas */
 .tarjeta1 button, .tarjeta-grande1 button {

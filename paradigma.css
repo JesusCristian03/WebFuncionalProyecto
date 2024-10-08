@@ -1,5 +1,5 @@
 * {
-    border: 1px solid black;
+    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 
@@ -124,7 +124,7 @@
 .introduccion {
     margin: 0px;
     padding: 0px;
-    background-color: #152157;
+
     margin-left: 20%;
     margin-right: 20%;
 
@@ -134,7 +134,7 @@
         color: #34C3EE;
         font-size: 3rem;
         text-align: center;
-        background-color: white;
+      
     }
 
     /*PArte de la imagen e introduccion de la programacion funcional*/
@@ -232,7 +232,7 @@
         color: #34C3EE;
         font-size: 3rem;
         text-align: center;
-        background-color: white;
+        
     }
     p,li {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -243,6 +243,9 @@
    
     .keyword {
         color: #c678dd; /* Palabras clave */
+    }
+    .keywordwhite{
+        color:white;
     }
 
     .function {
@@ -277,7 +280,68 @@
     }
 
 }
+.haskell{
+    margin-left: 20%;
+    margin-right: 20%;
+    .containerHaskell {
+        display: flex;
+        align-items: stretch; /* Asegura que ambos hijos tengan la misma altura */
+        border: 1px solid #ddd;
+        padding: 10px;
+        max-width: 100%;
+      
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
+    .text-contentHaskell, .image-contentHaskell {
+        padding: 15px;
+    }
+
+    .text-contentHaskell {
+        flex: 2; /* Hace que el texto ocupe más espacio */
+    }
+
+    .image-contentHaskell {
+        flex: 1; /* La imagen ocupará menos espacio */
+        display: flex;
+        align-items: center; /* Centra verticalmente la imagen */
+        justify-content: center; /* Centra horizontalmente la imagen */
+    }
+
+    .image-contentHaskell img {
+        max-height: 100%; /* La imagen se ajusta a la altura del contenedor */
+        max-width: 100%;
+        height: auto;
+    }
+
+    h2 {
+        margin: 0px;
+        color: #34C3EE;
+        font-size: 3rem;
+        text-align: center;
+      
+    }
+
+    p {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.5vw;
+        text-align: justify;
+    }
+}
+.bibliografia{
+   
+    h2{
+        margin: 0px;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+     
+    }
+    p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.5vw;
+    }
+ }
 footer {
     padding: 20px;
     background-color: #333;

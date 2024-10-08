@@ -6,7 +6,9 @@
 }
 
 
-
+body{
+    background-image: url('imagenes/fondoblanco3.jpg');
+}
 .barra-navegacion {
 
     background-image: url('imagenes/reflejo5.jpg');
@@ -83,7 +85,7 @@
     /* Añade un fondo translúcido al hacer hover */
 }
 .portada {
-    background-image: url('imagenes/fondoblanco3.jpg');
+
     /* Cambia 'tu-imagen.jpg' por la ruta de tu imagen */
     background-size: cover;
     /* Ajusta la imagen al tamaño del contenedor */
@@ -155,7 +157,7 @@
         color: #34C3EE;
         font-size: 3rem;
         text-align: center;
-        background-color: white;
+       
     }
 
     /*PArte de la imagen e introduccion de la programacion funcional*/
@@ -289,7 +291,20 @@
         cursor: pointer;
       }
 
- 
+ .bibliografia{
+   
+    h2{
+        margin: 0px;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+     
+    }
+    p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.5vw;
+    }
+ }
 
 
 footer {

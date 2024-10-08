@@ -38,6 +38,12 @@
                 <img src="imagenes/paradigma.png" alt="">
                 <p>Este paradigma enfatiza "qué hacer" en lugar de "cómo hacerlo", en contraste con otros paradigmas
                     como el imperativo, que se enfoca en instrucciones detalladas paso a paso.</p>
+                <p> La PF se basa en cálculo lambda y concretamente en composición de funciones puras para modelar las
+                    soluciones de software.</p>
+                <p>El desarrollo de software va de crear soluciones a problemas pequeños y después componerlos para
+                    solucionar un problema mayor. Es por eso que un modelo basado en funciones y en composición de las
+                    mismas como únicas herramientas para crear programas, nos brinda una forma muy elocuente de crear
+                    software.</p>
             </nav>
 
             <nav class="introduccion">
@@ -62,6 +68,25 @@
                         data-description="Combinar funciones simples para crear funciones complejas."></div>
                 </nav>
             </nav>
+            <nav class="haskell">
+                <h2>HASKELL</h2>
+                <div class="containerHaskell">
+                    <div class="text-contentHaskell">
+
+                        <p>
+                            Haskell es un lenguaje de programación funcional puro que utiliza el cálculo Lambda como
+                            base. Es conocido por su manejo de funciones de primera clase, evaluación perezosa y fuerte
+                            tipado estático, lo que permite la creación de programas robustos y fáciles de razonar. Su
+                            enfoque en la inmutabilidad y la concurrencia lo hacen ideal para el desarrollo de sistemas
+                            concurrentes y paralelos. También es utilizado en aplicaciones de análisis de datos,
+                            inteligencia artificial y simulaciones científicas.
+                        </p>
+                    </div>
+                    <div class="image-contentHaskell">
+                        <img src="imagenes/haskell.png" alt="Logo de Haskell">
+                    </div>
+                </div>
+            </nav>
             <nav class="code">
                 <h2>EJERCICIO EN HASKELL</h2>
                 <p>Descripción:</p>
@@ -70,120 +95,118 @@
                     <li>Multiplicar cada número par por 2.</li>
                     <li>Sumar todos los números resultantes.</li>
                 </ul>
-
-
-                <pre>
+                <pre> 
 <span class="comment">-- Función para sumar los números pares de una lista</span>
-<span class="keyword">sumarPares</span> :: [<span class="keyword">Int</span>] -> <span class="keyword">Int</span>
-<span class="keyword">sumarPares</span> <span class="operator">=</span> <span class="keyword">foldr</span> (<span class="operator">+</span>) <span class="number">0</span> . <span class="keyword">filter</span> (<span class="keyword">even</span>)
+<span class="keyword">sumarPares</span> <span class="keywordwhite">:: [</span><span class="keyword">Int</span><span class="keywordwhite">] -></span> <span class="keyword">Int</span>
+<span class="keyword">sumarPares</span> <span class="operator">=</span> <span class="keyword">foldr</span> <span class="keywordwhite">(</span><span class="operator">+</span><span class="keywordwhite">)</span> <span class="number">0</span> <span class="keywordwhite"> . </span> <span class="keyword">filter</span><span class="keywordwhite">(</span><span class="keyword">even</span><span class="keywordwhite">)</span>
                     
 <span class="comment">-- Uso de la función sumarPares</span>
-<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> (<span class="keyword">sumarPares</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])
+<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> <span class="keywordwhite">(</span><span class="keyword">sumarPares</span> <span class="keywordwhite">[</span><span class="number">1</span><span class="keywordwhite">,</span> <span class="number">2</span><span class="keywordwhite">,</span> <span class="number">3</span><span class="keywordwhite">,</span> <span class="number">4</span><span class="keywordwhite">,</span> <span class="number">5</span><span class="keywordwhite">, </span> <span class="number">6</span><span class="keywordwhite">])</span>
                     
 <span class="comment">-- Función para mapear una función sobre una lista</span>
-<span class="keyword">aplicarFuncion</span> :: (<span class="keyword">a</span> -> <span class="keyword">b</span>) -> [<span class="keyword">a</span>] -> [<span class="keyword">b</span>]
-<span class="keyword">aplicarFuncion</span> f <span class="operator">=</span> <span class="keyword">map</span> f
+<span class="keyword">aplicarFuncion</span> <span class="keywordwhite">:: (</span><span class="keyword">a</span> <span class="keywordwhite">-></span> <span class="keyword">b</span><span class="keywordwhite">) -> [</span>) <span class="keyword">a</span><span class="keywordwhite">[ -> ]</span><span class="keyword">b</span><span class="keywordwhite">]</span>
+<span class="keyword">aplicarFuncion</span> <span class="keywordwhite">f</span> <span class="operator">=</span> <span class="keyword">map</span> <span class="keywordwhite"> f </span>
                     
 <span class="comment">-- Uso de la función aplicarFuncion con una función anónima</span>
-<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> (<span class="keyword">aplicarFuncion</span> (<span class="keyword">\\</span>x <span class="operator">-></span> x <span class="operator">*</span> x) [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])
+<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> <span class="keywordwhite">(</span><span class="keyword">aplicarFuncion</span><span class="keywordwhite">(</span><span class="keyword">\\</span><span class="keywordwhite"> x </span> <span class="operator">-></span> <span class="keywordwhite"> x </span> <span class="operator">*</span> <span class="keywordwhite">x) [</span><span class="number">1</span><span class="keywordwhite">, </span><span class="number">2</span><span class="keywordwhite">, </span><span class="number">3</span><span class="keywordwhite">])</span>
                     
 <span class="comment">-- Función para calcular el factorial de un número</span>
-<span class="keyword">factorial</span> :: <span class="keyword">Int</span> -> <span class="keyword">Int</span>
+<span class="keyword">factorial</span> <span class="keywordwhite"> :: </span> <span class="keyword">Int</span> <span class="keywordwhite"> -> </span> <span class="keyword">Int</span>
 <span class="keyword">factorial</span> <span class="number">0</span> <span class="operator">=</span> <span class="number">1</span>
-<span class="keyword">factorial</span> n <span class="operator">=</span> n <span class="operator">*</span> <span class="keyword">factorial</span> (n <span class="operator">-</span> <span class="number">1</span>)
+<span class="keyword">factorial</span> <span class="keywordwhite"> n </span> <span class="operator">=</span> <span class="keywordwhite"> n </span> <span class="operator">*</span> <span class="keyword">factorial</span> <span class="keywordwhite"> (n </span> <span class="operator">-</span> <span class="number">1</span><span class="keywordwhite">)</span>
                     
 <span class="comment">-- Uso de la función factorial</span>
-<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> (<span class="keyword">factorial</span> <span class="number">5</span>)
+<span class="keyword">main</span> <span class="operator">=</span> <span class="keyword">print</span> <span class="keywordwhite">( </span><span class="keyword">factorial</span> <span class="number">5</span><span class="keywordwhite">) </span>
                     </pre>
             </nav>
-
-            <nav class="">
-                
-            </nav>
-
-
         </article>
-
-
+        
     </main>
     <footer>
         <!-- Contenedor de las 4 tarjetas pequeñas -->
         <div class="contenedor-tarjetas1">
-          <!-- Primera tarjeta -->
-          <div class="tarjeta1">
-            <h3>Información de Contacto</h3>
-            <ul>
-                <li><strong>Correo:</strong> funcionalblitz@gmail.com</li>
-                <li><strong>Teléfono:</strong> +52 (777) 123 4567</li>
-                <li><strong>Dirección:</strong> Calle Emiliano Zapata, Cuautla, Morelos, México.</li>
-            </ul>
-            <button>Más información</button>
-          </div>
-    
-          <!-- Segunda tarjeta -->
-          <div class="tarjeta1">
-            <h3>Redes Sociales</h3>
-            <nav class="redes">
-                <img src="imagenes/instagram.png" alt="">
-                <img src="imagenes/facebook.png" alt="">
-                <img src="imagenes/whatsapp.png" alt="">
-            </nav>
-            <button>Visítanos</button>
-          </div>
-    
-          <!-- Tercera tarjeta -->
-          <div class="tarjeta1">
-            <h3>Términos y Condiciones</h3>
-            <p>Información sobre los términos y condiciones del sitio.</p>
-            <button>Leer más</button>
-          </div>
-    
-          <!-- Cuarta tarjeta -->
-          <div class="tarjeta1">
-            <h3>Información Legal</h3>
-            <p>Políticas de privacidad y derechos de autor.</p>
-            <button>Ver detalles</button>
-          </div>
+            <!-- Primera tarjeta -->
+            <div class="tarjeta1">
+                <h3>Información de Contacto</h3>
+                <ul>
+                    <li><strong>Correo:</strong> funcionalblitz@gmail.com</li>
+                    <li><strong>Teléfono:</strong> +52 (777) 123 4567</li>
+                    <li><strong>Dirección:</strong> Calle Emiliano Zapata, Cuautla, Morelos, México.</li>
+                </ul>
+                <button>Más información</button>
+            </div>
+
+            <!-- Segunda tarjeta -->
+            <div class="tarjeta1">
+                <h3>Redes Sociales</h3>
+                <nav class="redes">
+                    <img src="imagenes/instagram.png" alt="">
+                    <img src="imagenes/facebook.png" alt="">
+                    <img src="imagenes/whatsapp.png" alt="">
+                </nav>
+                <button>Visítanos</button>
+            </div>
+
+            <!-- Tercera tarjeta -->
+            <div class="tarjeta1">
+                <h3>Términos y Condiciones</h3>
+                <p>Información sobre los términos y condiciones del sitio.</p>
+                <button>Leer más</button>
+            </div>
+
+            <!-- Cuarta tarjeta -->
+            <div class="tarjeta1">
+                <h3>Información Legal</h3>
+                <p>Políticas de privacidad y derechos de autor.</p>
+                <button>Ver detalles</button>
+            </div>
         </div>
-    
+
         <!-- Tarjeta grande para los colaboradores -->
         <div class="tarjeta-grande1">
-          <h1>COLABORADORES</h1>
-          <div class="colaboradores1">
-              <!-- Primer colaborador -->
-              <div class="colaborador1">
-                  <img src="imagenes/cristian.png" alt="Colaborador 1">
-                  <p>Jesus Cristian Campos Romero</p>
-              </div>
+            <article class="bibliografia">
+                <nav>
+                    <h2>BIBLIOGRAFÍA</h2>
+                    <p> Fernández, P. (2022, 9 septiembre). Qué es la programación funcional y sus características. OpenWebinars.net.<a href="https://openwebinars.net/blog/que-es-la-programacion-funcional-y-sus-caracteristicas/">https://openwebinars.net/blog/que-es-la-programacion-funcional-y-sus-caracteristicas/</a></p> 
+                </nav>   
+            </article>
+            <h1>COLABORADORES</h1>
+            <div class="colaboradores1">
+                <!-- Primer colaborador -->
+                <div class="colaborador1">
+                    <img src="imagenes/cristian.png" alt="Colaborador 1">
+                    <p>Jesus Cristian Campos Romero</p>
+                </div>
 
-              <!-- Segundo colaborador -->
-              <div class="colaborador1">
-                  <img src="imagenes/valeria.png" alt="Colaborador 2">
-                  <p>Valeria Ramirez Calleja</p>
-              </div>
+                <!-- Segundo colaborador -->
+                <div class="colaborador1">
+                    <img src="imagenes/valeria.png" alt="Colaborador 2">
+                    <p>Valeria Ramirez Calleja</p>
+                </div>
 
-              <!-- Tercer colaborador -->
-              <div class="colaborador1">
-                  <img src="imagenes/chino.png" alt="Colaborador 3">
-                  <p>Irving Eduardo Galindo Barrera</p>
-              </div>
+                <!-- Tercer colaborador -->
+                <div class="colaborador1">
+                    <img src="imagenes/chino.png" alt="Colaborador 3">
+                    <p>Irving Eduardo Galindo Barrera</p>
+                </div>
 
-              <!-- Cuarto colaborador -->
-              <div class="colaborador1">
-                  <img src="imagenes/diego.png" alt="Colaborador 4">
-                  <p>Diego Alberto Rodríguez Jiménez</p>
-              </div>
-              <div class="colaborador1">
-                  <img src="imagenes/abigail.png" alt="Colaborador 4">
-                  <p>Mayra Abigail Horcasitas</p>
-              </div>
-              <div class="colaborador1">
-                  <img src="imagenes/yahmir.png" alt="Colaborador 4">
-                  <p>Sánchez Camacho Yamir</p>
-              </div>
-          </div>
-      </div>
-      </footer>
+                <!-- Cuarto colaborador -->
+                <div class="colaborador1">
+                    <img src="imagenes/diego.png" alt="Colaborador 4">
+                    <p>Diego Alberto Rodríguez Jiménez</p>
+                </div>
+                <div class="colaborador1">
+                    <img src="imagenes/abigail.png" alt="Colaborador 4">
+                    <p>Mayra Abigail Horcasitas</p>
+                </div>
+                <div class="colaborador1">
+                    <img src="imagenes/yahmir.png" alt="Colaborador 4">
+                    <p>Sánchez Camacho Yamir</p>
+                </div>
+            </div>
+           
+        </div>
+    </footer>
 
     <script src="principal.js"></script>
 </body>
