@@ -1,7 +1,6 @@
 * {
 
 
-   border: 1px solid black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 
@@ -46,6 +45,7 @@
     /*  Permite que cada elemento use el espacio disponible */
     border: 1px solid black;
     padding: 10px;
+    background-image: url(imagenes/reflejo4.jpg);
 
     color: black;
     font-size: 30px;
@@ -61,7 +61,6 @@
 
 .iniciosesion {
     border: 1px solid black;
-    border-radius: 30px;
     background-color: #01B1E1;
 }
 
@@ -69,7 +68,7 @@
     text-decoration: none;
     color: white;
     /* Color del texto */
-    font-size: 2rem;
+    font-size: 1.2rem;
     padding: 10px 20px;
     background: transparent;
     /* Elimina cualquier color de fondo */
@@ -82,21 +81,15 @@
     /* Añade un fondo translúcido al hacer hover */
 }
 
-
-
-
-
-
-
-
-
 .conceptos {
     height: auto;
     background-image: url(imagenes/fondoblanco3.jpg);
+    
     h2{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         text-align: center;
         font-size: 4vw;
+        color:  #34C3EE;
     }
 }
 
@@ -255,13 +248,42 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10px; /* Espacio entre elementos */
-
     color: white;
     width: 23%; /* Cada tarjeta ocupa el 23% del ancho del contenedor */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    background-image: url(imagenes/reflejo5.jpg);
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content:left;
+        align-items: left;
+        text-align: left;
+        list-style-type: none; /* Quita las viñetas */
+        padding-left: 0; /* Opcional: elimina el padding predeterminado */
+        margin: 0;
+        li{
+            padding: 0;
+            margin:0;
+        }
+    }
+    .redes{
+        margin:15px;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        img{
+            border-radius: 50%;
+            width: auto;
+            height: 50px;
+        }
+
+    }
   }
 
   /* Tarjeta grande para los colaboradores */
@@ -289,9 +311,10 @@ footer {
   .colaborador1 {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espacio entre elementos */
-    text-align: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* Espacio entre elementos */
   }
 
   .colaborador1 img {
